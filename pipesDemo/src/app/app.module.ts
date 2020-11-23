@@ -1,18 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TypechallengecardComponent } from './typechallengecard/typechallengecard.component';
+import { ConvertPipe } from './convert.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TypechallengecardComponent
+    ConvertPipe
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

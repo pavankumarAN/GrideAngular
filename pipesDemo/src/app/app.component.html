@@ -1,0 +1,62 @@
+<div class="container">
+  <h3>Payement Form</h3>
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payee Name</label>
+      <input class="form-control" type="text" (input)="onNameChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label for="">
+        <b>Name</b>
+        <div>
+          {{name | titlecase}}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Date</label>
+      <input class="form-control" type="date" (input)="onDateChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label for="">
+        <b>Date</b>
+        <div>
+          {{date | date:'MMMM dd - yyyy'}}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Rate</label>
+      <input class="form-control" type="number" (input)="onDollarChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label for="">
+        <b>Rate</b>
+        <div>
+          {{dollar | currency:'INR':'symbol-narrow':'4.3-3'}}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Height</label>
+      <input class="form-control" type="text" (input)="onHeightChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label for="">
+        <b>Height</b>
+        <div>
+          {{height | convert}}
+        </div>
+      </label>
+    </div>
+  </div>
+</div>

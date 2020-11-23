@@ -1,0 +1,10 @@
+.correct {
+    color : green;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.incorrect {
+    color : red;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
