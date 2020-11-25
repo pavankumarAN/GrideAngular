@@ -1,0 +1,14 @@
+h4 {
+    margin: 5px 0;
+}
+img {
+    height: 350px;
+    width: 450px;
+    margin: 0 25% 0 25%;
+}
+.pagination {
+    margin-top: 15px;
+}
+a {
+    cursor: pointer;
+}

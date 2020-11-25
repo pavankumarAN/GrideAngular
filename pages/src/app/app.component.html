@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="text-center">
+    <h4  [appClass]=" 'cyan' ">{{images[currentPage].title}}</h4>
+    <img [src]="images[currentPage].url" alt="">
+  </div>
+</div>
+<nav>
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [ngClass]="{disabled: currentPage===0}">
+      <a class="page-link" (click)="currentPage=currentPage-1">Prev</a>
+    </li>
+    <!-- <ng-container *ngFor="let image of images; let i=index;">
+      <li class="page-item" [ngClass]="{active: i===currentPage}">
+        <a class="page-link" *ngIf="checkWindowIndecx(i)" (click)="currentPage=i">{{i+1}}</a>
+      </li>
+    </ng-container> -->
+
+    <ng-container *appTimes="images.length; let i=index;">
+      <li class="page-item" [ngClass]="{active: i===currentPage}">
+        <a class="page-link" *ngIf="checkWindowIndecx(i)" (click)="currentPage=i">{{i+1}}</a>
+      </li>
+    </ng-container>
+    <li class="page-item" [ngClass]="{disabled: currentPage===itemLength-1}">
+      <a class="page-link" (click)="currentPage=currentPage+1">Next</a>
+    </li>
+  </ul>
+</nav>
+
+
+<!-- <ul *appTimes="5">
+  <li>structural directives</li>
+</ul> -->
