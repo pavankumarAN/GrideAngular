@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'mods',
     loadChildren: () => import('./mods/mods.module').then(m => m.ModsModule)
   },
+  {
+    path:'feedback',
+    loadChildren: () => import('./feedback/feedback.module').then(m =>m.FeedbackModule)
+  },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent }
 ];
