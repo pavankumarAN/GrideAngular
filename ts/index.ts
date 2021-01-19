@@ -4,7 +4,6 @@ class Car {
 
     drive() {
         console.log("Drive");
-        
     }
 }
 
